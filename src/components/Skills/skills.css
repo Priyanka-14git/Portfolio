@@ -1,0 +1,66 @@
+ 
+   .skills {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: all 3s ease-in-out;
+  }
+  
+  .skills-grid.animate {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  
+  .skill {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transform: scale(0.9); 
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease,;
+  }
+  
+  .skills-grid.animate .skill {
+    animation: fadeInUp 2s ease-in-out forwards;
+  }
+  
+  .skill:hover {
+    transform: translateY(-10px) scale(1.1);  /* Uplift and enlarge the skill tab */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  /* Add shadow for uplift effect */
+    background-color: #0056b3;  /* Darker blue background on hover */
+  }
+  
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+   
+
+
+   
